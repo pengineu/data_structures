@@ -1,9 +1,9 @@
-package week2;
+package week02;
 
 public class ArrList <E> {
     private E a[];
     private int size;
-    private ArrList() {
+    public ArrList() {
         a = (E[]) new Object[1];
         size = 0;
     }
@@ -13,14 +13,22 @@ public class ArrList <E> {
     }
 
     public void insertLast(E newItem) {
-        a[size] = newItem;  // size가 마지막 요소의 인덱스이므로 a[size]에 newItem 저장
+        resize(size+1);
+        size += 1;
+        a[size+1] = newItem;  // size가 마지막 요소의 인덱스이므로 a[size]에 newItem 저장
     }
+
 
     public void insert(E newItem, int k) {
+        if (a[size] != null) {
+            resize(2*size);
+        }
         a[k] = newItem;
+
     }
 
-    public E deleate(int k) {
+    public E delete(int k) {
+        E key = a[k];
         a[k] = null;
         return a[k];
     }
@@ -34,6 +42,7 @@ public class ArrList <E> {
         for (int i = 0; i < size; i++) {
             resizeList[i] = a[i];
             a = resizeList;
+            size = a.length;
         }
     }
 
