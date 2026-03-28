@@ -1,4 +1,4 @@
-package week02;
+package week02.ArrList;
 
 public class Main {
     public static void main(String[] args) {

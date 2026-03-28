@@ -1,4 +1,4 @@
-package week02;
+package week02.ArrList;
 
 public class ArrList <E> {
     private E[] a;          //ArrList 배열
