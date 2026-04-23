@@ -94,4 +94,4 @@ public class BinaryTree<Key extends Comparable<Key>> {      //BinaryTree Class
         t.setRight(copy(n.getRight()));                     //노드의 오른쪽 요소 복사 재귀
         return t;                                           //맨 처음 생성했던 루트 노드 반환
     }
-}
+}   

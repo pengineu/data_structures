@@ -31,6 +31,8 @@ public class ListStack <E>{     //ListStack class
 
     public E pop() {                            //pop 메서드
         E returnVal = peek();                   //맨 위 요소를 가져옴(peek에서 이미 예외처리를 진행)
+        Node<E> t = top;
+        t.getNext().setNext(null);
         top = top.getNext();                    //맨 위 노드를 없앰
         size--;                                 //size를 줄임
         return returnVal;                       //저장했던 맨 위 요소를 반환
