@@ -25,6 +25,9 @@ public class Merge {
                 j++;                            //mid 쪽의 다음으로 작은 값으로 이동
             }
         }
+        for (int k = low; k <= high; k++) {     //처음부터 순회
+            arr[k] = temp[k];                   //정렬된 temp 복사
+        }
     }
     private static void sort(Comparable[] arr, Comparable[] temp, int low, int high) {  //Merge sort 메서드
         if (high <= low) {                              //크기가 1 이하라면
@@ -38,6 +41,5 @@ public class Merge {
     public static void sort(Comparable[] arr) {         //사용자 버전 Merge sort
         Comparable[] temp = new Comparable[arr.length]; //배열 객체 생성
         sort(arr, temp, 0, arr.length-1);     //정렬된 배열을 temp에 넣음
-        arr = temp;                                     //temp를 원래 배열로
     }
 }

@@ -27,7 +27,7 @@ public class Heap {
             downHeap(arr, i, size);
         }
         while (size > 1) {                                          //size만큼 반복
-            swap(arr, 0, size);                                   //Max를 맨 뒤에 넣음
+            swap(arr, 1, size);                                   //Max를 맨 뒤에 넣음
             size--;                                                 //size를 줄임
             downHeap(arr, 1, size);                              //다시 MaxHeap 생성
         }
